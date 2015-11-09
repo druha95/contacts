@@ -1,0 +1,11 @@
+/node_modules
+/dist
+/.tmp
+/.idea
+/.sass-cache
+/bower_components
+.yo-rc.json
+.bowerrc
+.editorconfig
+.jscsrc
+.jshintrc
