@@ -19,17 +19,17 @@ angular
   ])
   .config(function ($routeProvider) {
     $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
+      .when('/gmail', {
+        templateUrl: '../views/gmail.html',
         controller: 'GmailContacts',
         controllerAs: 'gmail'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
+      .when('/hotmail', {
+        templateUrl: '../views/hotmail.html',
+        controller: 'HotmailContacts',
+        controllerAs: 'hotmail'
       })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/gmail'
       });
   });
