@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc function
- * @name izzlyApp.controller:HotmailContacts
+ * @name izzlyApp.controller:HotmailCtrl
  * @description
- * # HotmailContacts
+ * # HotmailCtrl
  * Controller of the izzlyApp which gets
  * list of contacts from hotmail
  */
 angular.module('izzlyApp')
-  .controller('HotmailContacts',['$scope', '$window', function ($scope, $window) {
+  .controller('HotmailCtrl',['$scope', '$window', function ($scope, $window) {
 
     $scope.WL = window.WL;
 

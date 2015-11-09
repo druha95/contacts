@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc function
- * @name izzlyApp.controller:GmailContact
+ * @name izzlyApp.controller:GmailCtrl
  * @description
- * # GmailContact
+ * # GmailCtrl
  * Controller of the izzlyApp gets contacts list
  * from gmail
  */
 angular.module('izzlyApp')
-  .controller('GmailContacts',['$scope','$window', '$http','$timeout',
+  .controller('GmailCtrl',['$scope','$window', '$http','$timeout',
               function ($scope, $window, $http, $timeout) {
 
     $scope.applicationData = {};

@@ -21,13 +21,18 @@ angular
     $routeProvider
       .when('/gmail', {
         templateUrl: '../views/gmail.html',
-        controller: 'GmailContacts',
+        controller: 'GmailCtrl',
         controllerAs: 'gmail'
       })
       .when('/hotmail', {
         templateUrl: '../views/hotmail.html',
-        controller: 'HotmailContacts',
+        controller: 'HotmailCtrl',
         controllerAs: 'hotmail'
+      })
+      .when('/yahoo', {
+        templateUrl: '../views/yahoo.html',
+        controller: 'YahooCtrl',
+        controllerAs: 'yahoo'
       })
       .otherwise({
         redirectTo: '/gmail'
