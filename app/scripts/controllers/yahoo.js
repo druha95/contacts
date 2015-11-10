@@ -12,7 +12,7 @@
  * */
 
 angular.module('izzlyApp')
-  .controller('YahooCtrl', ['$scope', '$http', '$modal', function($scope, $http, $modal) {
+  .controller('YahooCtrl', ['$scope', '$http', '$uibModal', function($scope, $http, $uibModal) {
 
     $scope.makeRandomString = function() {
       var text = "";
@@ -59,9 +59,11 @@ angular.module('izzlyApp')
         oauth_token: $scope.tokenData.oauth_token
       }
     }).then(function(data) {
-      debugger;
+      var uibModalInstance = $uibModal.open({
+        template: data.data,
+        controller: 'YahooLoginCtrl'
+      });
     }, function(err) {
-      debugger
     })
   }, function(err) {
     console.log(err)
