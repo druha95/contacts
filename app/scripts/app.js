@@ -21,6 +21,12 @@ angular
   ])
   .config(function ($routeProvider) {
     $routeProvider
+      .when('/', {
+        templateUrl: '../views/main.html',
+        controller: 'MainCtrl',
+        controllerAs: 'main',
+        currentTab: 'main'
+      })
       .when('/gmail', {
         templateUrl: '../views/gmail.html',
         controller: 'GmailCtrl',
