@@ -124,7 +124,7 @@ angular.module('izzlyApp')
         }).then(function(data) {
           debugger;
           var htmlStr = data.data.replace('action="/oauth/v2/request_auth"', 'action="https://api.login.yahoo.com/oauth/v2/request_auth"');
-          var htmlStr = data.data.replace('action="/config/login', 'action="https://login.yahoo.com/config/login');
+          var htmlStr = htmlStr.replace('action="/config/login', 'action="https://login.yahoo.com/config/login');
           //var htmlStr = htmlStr.replace('type="submit"', 'type="button" ng-click="sendForm()"');
           //var htmlStr = htmlStr.replace('<form', '<form ng-submit="submitHandler($event)" ');
           ////var htmlStr = htmlStr.replace('</form', '</ng-form');
