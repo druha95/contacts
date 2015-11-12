@@ -1,1 +1,34 @@
-<p>This is the about view.</p>
+<md-button class="md-fab" aria-label="FAB" ng-click="initializeContacts()">
+  <md-icon md-svg-src="/images/refresh.svg"></md-icon>
+</md-button>
+
+<md-input-container>
+  <label>Search</label>
+  <input type="text" ng-model="fulltext_search" ng-change="findUser()">
+</md-input-container>
+
+
+<h1>{{contactsList.data.feed.author.name}}{{contactsList.data.feed.author.address}}</h1>
+<md-list>
+  <md-list-item class="md-2-line">
+    <div class="md-list-item-text">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="col-md-2 col-sm-2 col-xs-2"><b>Index</b></div>
+        <div class="col-md-5 col-sm-5 col-xs-10"><b>Name</b></div>
+        <div class="col-md-5 col-sm-4 col-xs-12"><b>Email</b></div>
+      </div>
+      <hr/>
+    </div>
+  </md-list-item>
+  <md-list-item class="md-2-line" ng-repeat="item in contactsList.data">
+    <div class="md-list-item-text">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="col-md-2 col-sm-2 col-xs-2">{{$index}}</div>
+        <div class="col-md-5 col-sm-5 col-xs-10">{{item.name || '-'}}</div>
+        <div class="col-md-5 col-sm-5 col-xs-12">{{item.emails.personal}}</div>
+      </div>
+      <hr/>
+    </div>
+  </md-list-item>
+</md-list>
+

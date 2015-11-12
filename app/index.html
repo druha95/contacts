@@ -24,7 +24,7 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="header">
+    <div class="header" ng-controller="Navbar">
       <div class="navbar navbar-default" role="navigation">
         <div class="container">
           <div class="navbar-header">
@@ -39,14 +39,33 @@
             <a class="navbar-brand" href="#/">izzly</a>
           </div>
 
-          <div class="collapse navbar-collapse" id="js-navbar-collapse">
+          <!--<div class="collapse navbar-collapse" id="js-navbar-collapse">-->
 
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#/">Gmail</a></li>
-              <li><a ng-href="#/hotmail">Hotmail</a></li>
-              <li><a ng-href="#/yahoo">Yahoo</a></li>
-            </ul>
-          </div>
+            <!--<ul class="nav navbar-nav">-->
+              <!--<li class="active"><a href="#/gmail">Gmail</a></li>-->
+              <!--<li><a ng-href="#/hotmail">Hotmail</a></li>-->
+              <!--<li><a ng-href="#/yahoo">Yahoo</a></li>-->
+            <!--</ul>-->
+          <!--</div>-->
+          <md-menu>
+            <md-button ng-click="$mdOpenMenu($event)" class="md-icon-button" aria-label="Open some menu">
+              <md-icon md-menu-origin ></md-icon>
+            </md-button>
+            <md-menu-content>
+              <md-menu-item>
+                <md-button ng-click="doSomething()" aria-label="Do something">
+                  <md-icon md-menu-align-target ></md-icon>
+                  Do Something
+                </md-button>
+              </md-menu-item>
+              <md-menu-item>
+                <md-button ng-click="doSomething()" aria-label="Do something">
+                  <md-icon md-menu-align-target ></md-icon>
+                  Do Something
+                </md-button>
+              </md-menu-item>
+            </md-menu-content>
+          </md-menu>
         </div>
       </div>
     </div>
@@ -74,6 +93,8 @@
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
+        <script src="scripts/services/gmailCache.js"></script>
+        <script src="scripts/services/hotmailCache.js"></script>
         <script src="scripts/controllers/gmail.js"></script>
         <script src="scripts/controllers/hotmail.js"></script>
         <script src="scripts/controllers/yahoo.js"></script>
