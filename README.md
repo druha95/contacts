@@ -5,8 +5,22 @@ version 0.14.0.
 
 ## Build & development
 
-Run `grunt` for building and `grunt serve` for preview.
+Run `npm install` and `bower install`
 
-## Testing
+Run `google-chrome --disable-web-security`
 
-Running `grunt test` will run the unit tests with karma.
+Run `grunt serve` for preview.
+
+Open localhost:9000/(without 'www' better)
+
+
+## Accounts
+
+druhatest@gmail.com
+A25191709
+
+druha95@hotmail.com
+A25191709
+
+druha95@yahoo.com
+A25191709

@@ -13,8 +13,8 @@ angular.module('izzlyApp')
   function ($scope, $window, $http, $timeout, GmailCache, $q) {
 
     $scope.applicationData = {};
-    $scope.applicationData.clientId = '846336466595-nucqeu94903ddb46iioqnen02u0kefrs.apps.googleusercontent.com';
-    $scope.applicationData.apiKey = 'AIzaSyCpRkWJnLzOV1arohiFtn0u4EULkC2acQ8';
+    $scope.applicationData.clientId = '145546828706-uieje227b2amaqd43trok4q8cf5hkrpa.apps.googleusercontent.com';
+    $scope.applicationData.apiKey = 'AIzaSyCZgi7jSpakaySi_cZVejYyE4gT9KO-8HA';
     $scope.applicationData.scopes = [
       'https://www.google.com/m8/feeds',
       'http://www.google.com/m8/feeds'

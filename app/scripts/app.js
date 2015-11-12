@@ -24,17 +24,20 @@ angular
       .when('/gmail', {
         templateUrl: '../views/gmail.html',
         controller: 'GmailCtrl',
-        controllerAs: 'gmail'
+        controllerAs: 'gmail',
+        currentTab: 'gmail'
       })
       .when('/hotmail', {
         templateUrl: '../views/hotmail.html',
         controller: 'HotmailCtrl',
-        controllerAs: 'hotmail'
+        controllerAs: 'hotmail',
+        currentTab: 'hotmail'
       })
       .when('/yahoo', {
         templateUrl: '../views/yahoo.html',
         controller: 'YahooCtrl',
-        controllerAs: 'yahoo'
+        controllerAs: 'yahoo',
+        currentTab: 'yahoo'
       })
       .otherwise({
         redirectTo: '/'
@@ -77,37 +80,10 @@ angular
     }
   })
 
-  .controller('Navbar', ['$scope','$mdSidenav', function($scope, $mdSidenav) {
-    $scope.toggleSidenav = function(menuId) {
-      $mdSidenav(menuId).toggle();
+  .controller('Navbar', ['$scope','$route', function($scope, $route) {
 
-      // Async lookup for sidenav instance; will resolve when the instance is available
-      $mdSidenav(componentId).then(function(instance) {
-        $log.debug( componentId + "is now ready" );
-      });
-// Async toggle the given sidenav;
-// when instance is known ready and lazy lookup is not needed.
-      $mdSidenav(componentId)
-        .toggle()
-        .then(function(){
-          $log.debug('toggled');
-        });
-// Async open the given sidenav
-      $mdSidenav(componentId)
-        .open()
-        .then(function(){
-          $log.debug('opened');
-        });
-// Async close the given sidenav
-      $mdSidenav(componentId)
-        .close()
-        .then(function(){
-          $log.debug('closed');
-        });
-// Sync check to see if the specified sidenav is set to be open
-      $mdSidenav(componentId).isOpen();
-// Sync check to whether given sidenav is locked open
-// If this is true, the sidenav will be open regardless of close()
-      $mdSidenav(componentId).isLockedOpen();
-    };
+    $scope.$on("$routeChangeSuccess", function(currentRoute, previousRoute){
+      $scope.currentTab = $route.current.currentTab;
+    });
+
   }]);
